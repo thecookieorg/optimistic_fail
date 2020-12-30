@@ -1,2 +1,15 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<%= render 'navbar' %>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-4 mb-3">Testing forms, session &amp; redis</h1>
+    <h3><strong>Forms</strong></h3>
+    <p class="lead">We have two forms: stimulus reflex and hotwire based ones. The purpose of this app is to test form failure with Optimism gem.</p>
+    <hr class="my-4">
+    <h3><strong>Session</strong></h3>
+    <p class="lead">Session based shopping cart (stimulus_reflex). We will have a couple of products stored directly in the sesssion.</p>
+    <hr class="my-4">
+    <h3><strong>Redis</strong></h3>
+    <p class="lead">Redis based shopping cart (stimulus_reflex). We will use redis as our cart database where users can add and remove products.</p>
+  </div>
+</div>

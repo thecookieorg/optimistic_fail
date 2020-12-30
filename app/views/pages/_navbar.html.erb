@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <%= link_to "Forms", root_url, class: "navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to 'Stimulus Reflex', stimulus_reflex_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Hotwire', hotwire_path, class: 'nav-link' %>
+        </li>
+      </ul>
+      <div class="my-2 my-lg-0">
+        <% if user_signed_in? %>
+          <%= link_to('Logout', destroy_user_session_path, method: :delete, class: 'btn btn-danger my-2 my-sm-0') %>
+        <% else %>
+          <%= link_to "Get Started", new_user_registration_path, class: 'btn btn-outline-success my-2 my-sm-0' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</nav>
